@@ -7,34 +7,25 @@
     <title>Resume</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="./fancybox-master/dist/jquery.fancybox.min.css" type="text/css" media="screen" />
 </head>
+
 <body>
     <header>
-        <ul class="nav">
-            <li class="nav-item">
-              <a class="nav-link" href="https://thebombvass.github.io/megVomvas/">About Me</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link " href="https://thebombvass.github.io/megVomvas/resume.html">Professional Resume</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="https://thebombvass.github.io/megVomvas/projects.html">Highlighted Projects</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://thebombvass.github.io/megVomvas/contact.html">Contact Me</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Fun</a>
-            </li>
-          </ul>  
-        </header>
+        <!-- Nav bar injected here -->
+    </header>
 
-        <div class="container">
-            <h1>My Resume</h1>
-            <h2>EXPERIENCE:</h2>
+            <div id="resumeHead" class="d-flex flex-column justify-content-center align-items-center">
+                <h1>Resume</h1>
+                <div>
+                    <h5>An introductory summary of the the <a>experience,</a> <a>skills,</a> and <a>accomplishments</a> that make me right for the job.</h5>
+                </div>
+            </div>
 
-            <p>
+            <div id="experienceSection" class="container">
+            
+            <h2 id="experienceHeader" class="animatedElement">EXPERIENCE:</h2>
+
+            <div id="experienceDeveloper" class="animatedElement">
                 <h4>FULL STACK WEB DEVELOPER- Madrid, Spain</h4><br>
                 <i>Ubiqum Code Academy | July 2019-December 2020</i><br>
                 <ul>
@@ -52,7 +43,9 @@
                         </li>
                     </li>
                 </ul>
-                <br>
+            </div>
+
+            <div id="experienceScrum" class="animatedElement">
                 <h4>RELEASE MANAGER & SCRUM MASTER- New York, NY</h4><br>
                 <i>Cognizant Technology Solutions | August 2017-June 2019</i><br>
                 <ul>
@@ -66,48 +59,52 @@
                         Facilitated collaboration between engineering teams and business stakeholders on a project spanning several areas of responsibility. 
                     </li>
                 </ul>
-            </p>
+            </div>
         </div>
 
-        <div class="container">
-            <h2>TECHNIAL SKILLS:</h2>
-            <ul>
-                <li>HTML & CSS</li>
-                <li>Javascript</li>
-                <li>Java & Spring Boot</li>
-                <li>Vue.js</li>
-                <li>MERN Stack (MongoDB, Express.js, React.js, Node.js) & Redux</li>
-                <li>jQuery</li>
-                <li>Bootstrap</li>
-                <li>API & AJAX</li>
-                <li>Jenkins</li>
-                <li>AWS Cloud</li>
-                <li>Python</li>
-                <li>Drupal CMS</li>
-                <li>SQL & Relational Databases</li>
-                <li>Systems Migration</li>
-                <li>Code Deployment Pipeline and CI/CD</li>
-                <li>Firebase</li>
-                <li>SPA</li>
-            </ul>
-            <h2>SOFT SKILLS:</h2>
-            <ul>
-                <li>Scrum and Agile Methodologies Mentorship</li>
-                <li>Team Building & Collaboration</li>
-                <li>Process Improvement</li>
-                <li>Leadership</li>
-                <li>Verbal and Written Communication</li>
-                <li>Creative Problem Solving</li>
-                <li>Passionate and Motivated</li>
+        <div id="techSkillsSection" class="container">
+            <h2 id="techSkillsHeader" class="animatedElement">TECHNIAL SKILLS:</h2>
+            <ul id="techSkillsList">
+                <li class="animatedElement techSkillsCard"><img scr="https://cdn.freebiesupply.com/logos/large/2x/html5-logo-png-transparent.png" alt="html"/> HTML</li>
+                <li class="animatedElement techSkillsCard">CSS</li>
+                <li class="animatedElement techSkillsCard">Javascript</li>
+                <li class="animatedElement techSkillsCard">Java & Spring Boot</li>
+                <li class="animatedElement techSkillsCard">Vue.js</li>
+                <li class="animatedElement techSkillsCard">MERN Stack (MongoDB, Express.js, React.js, Node.js) & Redux</li>
+                <li class="animatedElement techSkillsCard">jQuery</li>
+                <li class="animatedElement techSkillsCard">Bootstrap</li>
+                <li class="animatedElement techSkillsCard">API & AJAX</li>
+                <li class="animatedElement techSkillsCard">Jenkins</li>
+                <li class="animatedElement techSkillsCard">AWS Cloud</li>
+                <li class="animatedElement techSkillsCard">Python</li>
+                <li class="animatedElement techSkillsCard">Drupal CMS</li>
+                <li class="animatedElement techSkillsCard">SQL & Relational Databases</li>
+                <li class="animatedElement techSkillsCard">Systems Migration</li>
+                <li class="animatedElement techSkillsCard">Code Deployment Pipeline and CI/CD</li>
+                <li class="animatedElement techSkillsCard">Firebase</li>
+                <li class="animatedElement techSkillsCard">SPA</li>
             </ul>
         </div>
 
-        <div class="container">
-            <h2>CERTIFICATIONS AND AWARDS:</h2>
+        <div id="softSkillsSection" class="container">  
+            <h2 id="softSkillsHeader" class="animatedElement">SOFT SKILLS:</h2>
             <ul>
-                <li>Certified Scrum Master with Scrum Alliance</li>
-                <li>Certified AWS Cloud Practitioner</li>
-                <li>Cognizant's Woman Leader Award</li>
+                <li class="animatedElement">Scrum and Agile Methodologies Mentorship</li>
+                <li class="animatedElement">Team Building & Collaboration</li>
+                <li class="animatedElement">Process Improvement</li>
+                <li class="animatedElement">Leadership</li>
+                <li class="animatedElement">Verbal and Written Communication</li>
+                <li class="animatedElement">Creative Problem Solving</li>
+                <li class="animatedElement">Passionate and Motivated</li>
+            </ul>
+        </div>
+
+        <div id="awardsSection" class="container">
+            <h2 id="awardsHeader" class="animatedElement">CERTIFICATIONS AND AWARDS:</h2>
+            <ul>
+                <li class="animatedElement">Certified Scrum Master with Scrum Alliance</li>
+                <li class="animatedElement">Certified AWS Cloud Practitioner</li>
+                <li class="animatedElement">Cognizant's Woman Leader Award</li>
             </ul>
         </div>
     
