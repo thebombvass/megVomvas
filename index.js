@@ -31,7 +31,7 @@ $(document).ready(function(){
     $("header").html(`
         <ul class="nav">
         <li class="nav-item">
-          <a class="nav-link" href=${aboutMeLink}>About Me</a>
+          <a class="nav-link" href=${aboutMeLink}> About Me </a>
         </li>
         <li class="nav-item">
           <a class="nav-link " href=${resumeLink}>Professional Resume</a>
