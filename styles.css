@@ -1,14 +1,26 @@
 
 /* styling for navbar */
+header {
+    background-color: black;
+}
+
 .nav {
-    background-color: rgb(0, 102, 255);
+    border-bottom: 2px solid white;
+    width: 90%;
+    position: relative;
+    left: 5%;
 }
 
 .nav a{
     color: white;
 }
 
-/* styling for resume page */
+.nav a:hover {
+    color: rgb(167, 250, 242);
+}
+
+
+/**** styling for about me page ****/
 #coverPhoto {
     margin: 30px;
     width: 25%;
@@ -21,22 +33,26 @@
     justify-content: center;
 }
 
+
+
+
+/**** styling for resume page ****/
 #resumeHead {
-    background-image: url(https://images.unsplash.com/photo-1472289065668-ce650ac443d2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
+    background-image: url(https://images.unsplash.com/photo-1537498425277-c283d32ef9db?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1057&q=80);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
-    margin-bottom: 4em;
+    color: white;
 }
-
 
 #resumeHead h1 {
     font-size: 60px;
 }
 
 #resumeHead div {
-    margin-top: 10%;
+    text-align: center;
+    margin-top: 30%;
     width: 60%;
 }
 
@@ -46,15 +62,33 @@
     position: relative;
 }
 
-
-/* animating experience section of resume */
-#experienceSection div {
-    margin-bottom: 5em;
+/*experience section of resume */
+#resumeBackground {
+    background-color: black;
+    color: white;
+    height: 100%;
+    bottom: 0;
+    padding-bottom: 100px;
+    margin-bottom: 0;
+    display: block;
 }
 
+#experienceSection {
+    height: 100vh;
+    min-height: 45em;
+    display: block;
+}
+
+#experienceHeader {
+    margin-bottom: 2em;
+    width: 100%;
+    text-align: center;
+}
+
+/* animations to make header appear */
 .animatedElement#experienceHeader{
     opacity: 0;
-    transition: all 500ms linear;
+    transition: all 800ms linear;
 }
 
 .animatedElement.inView#experienceHeader{
@@ -62,12 +96,44 @@
 }
 
 #experienceDeveloper {
+    z-index: 1;
     width: 80%;
 }
 
+#codeIcon {
+    position: relative; 
+    left: 110%;
+    bottom: 20em;
+}
+
+#pageIcon {
+    position: relative; 
+    left: 110%;
+    bottom: 15em;
+}
+
+#gitIcon {
+    position: relative; 
+    left: 110%;
+    bottom: 10em;
+}
+
+.animatedElement.devIcon {
+    opacity: 0;
+    transition: all 800ms linear;
+    transform: translate3d(-100px, 0px, 0px);
+}
+
+.animatedElement.devIcon.inView {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+}
+
+
+/* animations for the developer part of experience section */
 .animatedElement#experienceDeveloper{
     opacity: 0;
-    transition: all 500ms linear;
+    transition: all 1500ms linear;
     transform: translate3d(-100px, 0px, 0px);
 }
 
@@ -81,9 +147,20 @@
     float: right;
 }
 
+#todoIcon {
+    position: relative;
+    top: 6em;
+}
+
+#projectIcon {
+    position: relative;
+    top: 12em;
+}
+
+/* animations for the scrum master part of experience section */
 .animatedElement#experienceScrum{
     opacity: 0;
-    transition: all 500ms linear;
+    transition: all 800ms linear;
     transform: translate3d(100px, 0px, 0px);
 }
 
@@ -92,34 +169,322 @@
     transform: translate3d(0px, 0px, 0px);
 }
 
-/* animating technical skills section of resume  */
+.animatedElement.scrumIcon{
+    opacity: 0;
+    transition: all 1500ms linear;
+    transform: translate3d(100px, 0px, 0px);
+}
+
+.animatedElement.inView.scrumIcon{
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+}
+
+/* technical skills section of resume  */
 #techSkillsSection {
-    display: inline-block;
+    height: 100vh;
+    min-height: 47em;
+    margin-bottom: 10%;
+}
+
+#techSkillsHeader {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 50px;
 }
 
 #techSkillsList {
+    width: 100%;
     list-style: none;
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
+
+#techSkillsList img{
+    width: 10%;
+    height: 10%;
+    max-width: 70px;
+    min-width: 50px;
+    max-height: 70px;
+    min-height: 50px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+#techSkillsList svg {
+    width: 10%;
+    height: 10%;
+    max-width: 70px;
+    min-width: 50px;
+    max-height: 70px;
+    min-height: 50px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+#techSkillsList li{
+    /* border: 2px solid red; */
+    width: 25%;
+    height: 8em;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
 
 .animatedElement#techSkillsHeader {
     opacity: 0;
     transition: all 500ms linear;
-    transform: translate3d(100px, 0px, 0px);
 }
 
 .animatedElement.inView#techSkillsHeader {
     opacity: 1;
-    transform: translate3d(0px, 0px, 0px);
 }
 
 .animatedElement.techSkillsCard {
     opacity: 0;
-    transition: all 500ms linear;
-    transform: translate3d(100px, 0px, 0px);
+    transition: all 800ms linear;
 }
 
 .animatedElement.inView.techSkillsCard {
     opacity: 1;
+}
+
+
+/* soft skills section of resume  */
+#softSkillsSection {
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10%;
+}
+
+#softSkillsHeader {
+    width: 100%;
+    text-align: center;
+}
+
+#softSkillsList {
+    list-style: none;
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+#softSkillsList img{
+    width: 10%;
+    height: 10%;
+    max-width: 70px;
+    min-width: 50px;
+    max-height: 70px;
+    min-height: 50px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+#softSkillsList li{
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 50%;
+    margin: 5%;
+}
+
+/* bubbles for soft skills */
+#softScrum {
+    border: 6px solid  rgb(0, 139, 139);
+    padding: 100px;
+    width: 300px;
+    height: 300px;
+}
+#softScrum:hover {
+    background-color: rgb(0, 139, 139);
+}
+
+#softTeam {
+    border: 4px solid rgb(255, 70, 70);
+    padding: 50px;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    top: 8em;
+}
+
+#softTeam:hover {
+    background-color: rgb(255, 70, 70);
+}
+
+#softProc {
+    border: 3px solid rgb(28, 153, 255);
+    padding: 50px;
+    width: 150px;
+    height: 150px;
+}
+
+#softProc:hover {
+    background-color:  rgb(28, 153, 255);
+}
+
+#softLead {
+    border: 2px solid rgb(76, 231, 122);
+    padding: 30px;
+    width: 100px;
+    height: 100px;
+}
+
+#softLead:hover {
+background-color: rgb(76, 231, 122);
+}
+
+#softVerb {
+    border: 5px solid rgb(194, 64, 255);
+    padding: 80px;
+    width: 250px;
+    height: 250px;
+    position: relative;
+    bottom: 4em;
+}
+
+#softVerb:hover {
+    background-color: rgb(194, 64, 255);
+}
+
+#softCreate {
+    border: 4px solid rgb(158, 175, 250);
+    padding: 60px;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    left: 50px;
+    bottom: 5em;
+}
+
+#softCreate:hover {
+   background-color: rgb(158, 175, 250) 
+}
+
+#softPass {
+    border: 3px solid rgb(94, 146, 224);
+    padding: 40px;
+    width: 150px;
+    height: 150px;
+    position: relative;
+    bottom: 20em;
+}
+
+#softPass:hover {
+    background-color: rgb(94, 146, 224);
+}
+
+/* animations for soft skill section */
+.animatedElement#softSkillsHeader {
+    opacity: 0;
+    transition: all 500ms linear;
+}
+
+.animatedElement.inView#softSkillsHeader {
+    opacity: 1;
+}
+
+.animatedElement.softSkillsCard {
+    opacity: 0;
+    transition: all 800ms linear;
+    transform: translate3d(0px, 200px, 0px);
+}
+
+.animatedElement.inView.softSkillsCard {
+    opacity: 1;
     transform: translate3d(0px, 0px, 0px);
+}
+
+
+.animatedElement.softSkillsCard {
+    opacity: 0;
+    transition: all 800ms linear;
+    transform: translate3d(0px, 200px, 0px);
+}
+
+.animatedElement.inView.softSkillsCard {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+}
+
+
+/* awards section */
+#awardsSection {
+    min-height: 50vh;
+}
+
+#awardsHeader {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 4em;
+}
+
+#awardsList {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.trophy {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+.trophy svg{
+    width: 100%;
+    height: 18em;
+}
+
+.trophy p{
+    text-align: center;
+    z-index: 1;
+    color: black;
+    position: relative;
+    bottom: 14em;
+}
+
+.certificate {
+    border: 5px solid #1ABC9C;
+    border-radius: 20px;
+    height: 18em;
+    width: 25%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.certificate svg {
+    width: 50%;
+    height: auto;
+}
+
+.certificate h5 {
+    background-color:  #1ABC9C;
+    padding: 5px;
+    color: black;
+    margin-top: 3em;
+    margin-bottom: 2em;
+}
+
+.certificate p {
+    padding: 5px;
+    color: black;
+    background-color:  #1ABC9C;
+}
+
+.animatedElement.awardsItem{
+    opacity: 0;
+    transition: all 500ms linear;
+}
+
+.animatedElement.inView.awardsItem {
+    opacity: 1;
 }
 

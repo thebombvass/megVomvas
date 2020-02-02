@@ -77,11 +77,16 @@ $(document).ready(function(){
       //checking to see if this element is withing view of the window and applying in view class
       if((elemBottom >= winTop) && (elemTop <= winBottom)) {
         $(this).addClass('inView')
+
       } else {
         $(this).removeClass('inView')
       }
 
     })
   }
+
+  $('#seeProjects').click(()=> {
+    window.location.replace(projectsLink)
+  })
 
   });
